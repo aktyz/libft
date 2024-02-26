@@ -1,1 +1,1 @@
-#42 Core Project 01 - libft
+# 42 Core Project 01 - libft
