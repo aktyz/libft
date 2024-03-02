@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zslowian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 14:23:31 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/02 13:37:12 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/02 13:54:06 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-extern void	test_ft_isalpha(void);
-extern void	test_ft_isdigit(void);
-extern void	test_ft_isalnum(void);
-
-int	main(void)
+int	ft_isalnum(unsigned char c)
 {
-	test_ft_isalpha();
-	test_ft_isdigit();
-	test_ft_isalnum();
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

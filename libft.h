@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zslowian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 14:23:31 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/02 14:18:19 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-extern void	test_ft_isalpha(void);
-extern void	test_ft_isdigit(void);
-extern void	test_ft_isalnum(void);
+int	ft_isalpha(unsigned char c);
+int	ft_isdigit(unsigned char c);
+int	ft_isalnum(unsigned char c);
 
-int	main(void)
-{
-	test_ft_isalpha();
-	test_ft_isdigit();
-	test_ft_isalnum();
-	return (0);
-}
+#endif
