@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 12:14:54 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/02 12:03:30 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/02 12:07:12 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-extern void	test_ft_isalpha(void);
-extern void	test_ft_isdigit(void);
-
-int	main(void)
+int	ft_isdigit(unsigned char c)
 {
-	test_ft_isalpha();
-	test_ft_isdigit();
-	return (0);
+	return (c > 47 && c < 58);
 }
