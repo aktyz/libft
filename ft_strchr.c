@@ -37,9 +37,9 @@ char	*ft_strchr(const char *s, int c)
 		{
 			ptr++;
 		}
-		if(*ptr == c)
+		if (*ptr == c)
 			return (ptr);
 		else
-			return 0;
+			return (0);
 	}
 }

@@ -13,9 +13,9 @@
 #ifndef TEST_LIBFT_H
 # define TEST_LIBFT_H
 
-#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+# include "libft.h"
+# include <stdio.h>
+# include <string.h>
 
 void	test_ft_isalpha(void);
 void	test_ft_isdigit(void);

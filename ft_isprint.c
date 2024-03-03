@@ -14,7 +14,7 @@
 
 /* PURPOSE: checks for any printable character including space */
 
-int ft_isprint(unsigned char c)
+int	ft_isprint(unsigned char c)
 {
 	if (c < 32 || c > 126)
 		return (0);
