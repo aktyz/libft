@@ -14,13 +14,22 @@
 
 void	test_ft_strchr(void)
 {
-	char	*str;
+	char	str[14];
 	char	c;
 	char	*result;
 
+	printf("\nTesting ft_isdigit\n");
 	strcpy(str, "Hello, World!");
 	c = 'W';
-	printf("\nTesting ft_isdigit\n");
-	result = ft_strchar(str, c);
-	printf("1. Character \'W\' is on %c position in %s\n", result, str);
+	result = ft_strchr(str, c);
+	printf("1. Character \'W\' is on\t%s\tposition in %s\n", result, str);
+	c = '\0';
+	result = ft_strchr(str, c);
+	printf("2. Character \'\\0\' is on\t%s\tposition in %s\n", result, str);
+	c = 'z';
+	result = ft_strchr(str, c);
+	printf("2. Character \'z\' is on\t%s\tposition in %s\n", result, str);
+	c = 'H';
+	result = ft_strchr(str, c);
+	printf("2. Character \'H\' is on\t%s\tposition in %s\n", result, str);
 }

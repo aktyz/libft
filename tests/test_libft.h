@@ -15,6 +15,7 @@
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
 void	test_ft_isalpha(void);
 void	test_ft_isdigit(void);
