@@ -6,12 +6,11 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 12:12:32 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 14:20:25 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/03 20:40:42 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "test_libft.h"
 
 void	test_ft_isdigit(void)
 {

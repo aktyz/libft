@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   test_ft_strchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 19:53:02 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/03 19:53:02 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/03 20:28:59 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/03 20:28:59 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "test_libft.h"
 
-/*	If c is a lowercase letter, toupper() returns its uppercase
-	equivalent, if an uppercase representation exists in the current
-	locale. Otherwise, it returns c. */
-
-int	ft_toupper(int c)
+void	test_ft_strchr(void)
 {
-	if (c > 96 && c < 123)
-		return (c - 32);
-	else
-		return (c);
+	char	*str;
+	char	c;
+	char	*result;
+
+	strcpy(str, "Hello, World!");
+	c = 'W';
+	printf("\nTesting ft_isdigit\n");
+	result = ft_strchar(str, c);
+	printf("1. Character \'W\' is on %c position in %s\n", result, str);
 }

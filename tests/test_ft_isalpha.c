@@ -6,12 +6,11 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 17:49:29 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 14:20:49 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/03 20:41:02 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "test_libft.h"
 
 void	test_ft_isalpha(void)
 {

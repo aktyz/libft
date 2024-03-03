@@ -6,12 +6,11 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 14:13:26 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 14:19:43 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/03 20:39:36 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "test_libft.h"
 
 void	test_ft_isalnum(void)
 {

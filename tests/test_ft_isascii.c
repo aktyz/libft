@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isascii.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zslowian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 14:29:14 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 14:33:43 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/03 20:40:50 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "test_libft.h"
 
 void	test_ft_isascii(void)
 {

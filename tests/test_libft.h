@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   test_libft.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 19:53:02 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/03 19:53:02 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/03 20:37:19 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/03 20:37:19 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef TEST_LIBFT_H
+# define TEST_LIBFT_H
+
 #include "libft.h"
+#include <stdio.h>
 
-/*	If c is a lowercase letter, toupper() returns its uppercase
-	equivalent, if an uppercase representation exists in the current
-	locale. Otherwise, it returns c. */
+void	test_ft_isalpha(void);
+void	test_ft_isdigit(void);
+void	test_ft_isalnum(void);
+void	test_ft_isascii(void);
+void	test_ft_isprint(void);
 
-int	ft_toupper(int c)
-{
-	if (c > 96 && c < 123)
-		return (c - 32);
-	else
-		return (c);
-}
+void	test_ft_strchr(void);
+
+#endif
