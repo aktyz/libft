@@ -18,7 +18,7 @@ void	test_ft_strchr(void)
 	char	c;
 	char	*result;
 
-	printf("\nTesting ft_isdigit\n");
+	printf("\nTesting ft_strchr\n");
 	strcpy(str, "Hello, World!");
 	c = 'W';
 	result = ft_strchr(str, c);

@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/03 22:38:47 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/04 19:16:13 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
-	test_ft_strchr();
+	printf("*** STARTING TESTS ***\n");
+	test_ft_strrchr();
 	return (0);
 }

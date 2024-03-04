@@ -24,5 +24,6 @@ void	test_ft_isascii(void);
 void	test_ft_isprint(void);
 
 void	test_ft_strchr(void);
+void	test_ft_strrchr(void);
 
 #endif
