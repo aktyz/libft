@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/04 21:06:22 by zslowian         ###   ########.fr        #
+#    Updated: 2024/03/04 21:09:33 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ cp ../ft_strrchr.c ./ft_strrchr.c
 cp ../ft_strnstr.c ./ft_strnstr.c
 
 # Compile with appropriate flags
-cc -Wall -Wextra -Werror -c *.c -o tests.out
+cc -Wall -Wextra -Werror *.c -o tests.out
 
 # Run your tests
 ./tests.out

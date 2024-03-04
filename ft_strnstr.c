@@ -44,18 +44,19 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			if (*big_ptr == '\0')
 			{
 				if (*little_ptr == '\0')
-					return (big_ptr - ft_strlen(little));
+					return (big_ptr - ft_strlen((char *)little));
 				else
 					return (0);
 			}
 			else if (*little_ptr == '\0')
-				return (big_ptr - ft_strlen(little));
+				return (big_ptr - ft_strlen((char *)little));
 			else
 			{
-				big_ptr = big_ptr - ft_strlen(little) + 1;
+				big_ptr = big_ptr - ft_strlen((char *)little) + 1;
 				little_ptr = (char *)little;
 				len = max;
 			}
 		}
 	}
+	return (0);
 }
