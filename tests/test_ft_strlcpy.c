@@ -32,4 +32,6 @@ void	test_ft_strlcpy(void)
 	strcpy(source, "");
 	returned_lenght = ft_strlcpy(dest, source, (size_t) 20);
 	printf("5. Resulting copy: \"%s\" of lenght: %lu\n", dest, returned_lenght);
+	returned_lenght = ft_strlcpy(dest, source, (size_t) 1);
+	printf("6. Resulting copy: \"%s\" of lenght: %lu\n", dest, returned_lenght);
 }

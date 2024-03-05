@@ -27,5 +27,6 @@ void	test_ft_strchr(void);
 void	test_ft_strrchr(void);
 void	test_ft_strnstr(void);
 void	test_ft_strlcpy(void);
+void	test_ft_strdup(void);
 
 #endif
