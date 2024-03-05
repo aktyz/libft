@@ -20,11 +20,9 @@ void	test_ft_strnstr(void)
 
 	printf("\nTesting ft_strnstr\n");
 	strcpy(big, "Foo Bar Baz");
-
 	strcpy(little, "Bar");
 	result = ft_strnstr(big, little, 5);
 	printf("1. String \"%s\" is on\t%s\tposition in %s\n", little, result, big); // should return "Bar Baz"
-
 	result = ft_strnstr(big, little, 4);
 	printf("2. String \"%s\" is on\t%s\tposition in %s\n", little, result, big); // should return 0
 /*

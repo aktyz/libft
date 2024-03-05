@@ -30,14 +30,13 @@ char	*ft_strdup(char *src)
 	length = ft_strlen(src);
 	necessary_memory = sizeof(char) * (length + 1);
 	ptr = (char *)malloc(necessary_memory);
-
-	if(ptr == 0)
+	if (ptr == 0)
 		return (0);
 	else
-		{
-			check = ft_strlcpy(ptr, src, necessary_memory);
-			if(check != length)
-				return (0);
-			return (ptr);
-		}
+	{
+		check = ft_strlcpy(ptr, src, necessary_memory);
+		if (check != length)
+			return (0);
+		return (ptr);
+	}
 }

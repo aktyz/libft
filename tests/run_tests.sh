@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/04 21:09:33 by zslowian         ###   ########.fr        #
+#    Updated: 2024/03/05 20:57:28 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ cp ../ft_strlen.c ./ft_strlen.c
 cp ../ft_strchr.c ./ft_strchr.c
 cp ../ft_strrchr.c ./ft_strrchr.c
 cp ../ft_strnstr.c ./ft_strnstr.c
+cp ../ft_strlcpy.c ./ft_strlcpy.c
 
 # Compile with appropriate flags
 cc -Wall -Wextra -Werror *.c -o tests.out
@@ -47,5 +48,6 @@ rm ./ft_strchr.c
 rm ./ft_strncmp.c
 rm ./ft_strrchr.c
 rm ./ft_strnstr.c
+rm ./ft_strlcpy.c
 
 rm ./tests.out

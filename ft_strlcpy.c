@@ -22,7 +22,20 @@
 	The function returns the length of the total string
 	that it tried to create (as if truncation didn't occur). */
 
-size_t	strlcpy(char dst, const char *restrict src, size_t sz)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	return (0);
+	char	*ptr;
+	int		i;
+
+	ptr = (char *)src;
+	i = 0;
+	while (*ptr != '\0' && size > 1)
+	{
+		dst[i] = *ptr;
+		ptr++;
+		i++;
+		size--;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(dst));
 }

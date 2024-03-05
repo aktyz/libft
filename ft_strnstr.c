@@ -33,9 +33,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return (big_ptr);
 	while (*big_ptr != '\0' && len > 0)
 	{
-		if(*big_ptr == *little_ptr)
+		if (*big_ptr == *little_ptr)
 		{
-			while(*big_ptr == *little_ptr && *big_ptr != '\0' && len > 0)
+			while (*big_ptr == *little_ptr && *big_ptr != '\0' && len > 0)
 			{
 				big_ptr++;
 				little_ptr++;

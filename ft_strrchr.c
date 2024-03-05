@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-# include <stdio.h>
 
 /*	The strrchr() function returns a pointer to the last occurrence of the
 	character c in the string s.
@@ -35,7 +34,7 @@ char	*ft_strrchr(const char *s, int c)
 	else
 	{
 		ptr = ptr + length;
-		while(*ptr != c && ptr != s)
+		while (*ptr != c && ptr != s)
 		{
 			ptr--;
 		}
@@ -45,4 +44,3 @@ char	*ft_strrchr(const char *s, int c)
 			return (0);
 	}
 }
-
