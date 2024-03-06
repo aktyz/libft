@@ -28,4 +28,7 @@ void	test_ft_strlcat(void)
 	strcpy(dest, "Initial string + ");
 	result = ft_strlcat(dest, long_source, (size_t) 40);
 	printf("2. Resulting concat: \"%s\" of lenght: %lu\n", dest, result);
+	ft_bzero(source, 20);
+	ft_bzero(dest, 45);
+	ft_bzero(long_source, 50);
 }

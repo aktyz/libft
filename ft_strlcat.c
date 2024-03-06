@@ -28,12 +28,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	char	*ptr;
 
 	ptr = dst;
-	while(*ptr != '\0')
+	while (*ptr != '\0')
 	{
 		ptr++;
 		size--;
 	}
-	while(*src != '\0' && size > 1)
+	while (*src != '\0' && size > 1)
 	{
 		*ptr = *src;
 		ptr++;
@@ -41,5 +41,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		size--;
 	}
 	*ptr = '\0';
-	return(ft_strlen(dst));
+	return (ft_strlen(dst));
 }
