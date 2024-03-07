@@ -36,7 +36,7 @@ void	test_ft_strdup(void)
 		destination, ft_strlen(destination));
 	strcpy(source,
 		"This is a longer string to test the function with a larger input.");
-	destination = ft_strdup(src_long_input);
+	destination = ft_strdup(source);
 	printf("5. Empty string dup: \"%s\", of length: %u\n",
 		destination, ft_strlen(destination));
 	free(destination);

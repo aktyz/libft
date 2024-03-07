@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/06 22:19:19 by zslowian         ###   ########.fr        #
+#    Updated: 2024/03/07 11:27:03 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ cp ../ft_strlcpy.c ./ft_strlcpy.c
 cp ../ft_strdup.c ./ft_strdup.c
 cp ../ft_strlcat.c ./ft_strlcat.c
 cp ../ft_bzero.c ./ft_bzero.c
+cp ../ft_memset.c ./ft_memset.c
 
 # Compile with appropriate flags
 cc -Wall -Wextra -Werror *.c -o tests.out
@@ -55,5 +56,6 @@ rm ./ft_strlcpy.c
 rm ./ft_strdup.c
 rm ./ft_strlcat.c
 rm ./ft_bzero.c
+rm ./ft_memset.c
 
 rm ./tests.out

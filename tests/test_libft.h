@@ -31,5 +31,6 @@ void	test_ft_strlcat(void);
 void	test_ft_strdup(void);
 
 void	test_ft_bzero(void);
+void	test_ft_memset(void);
 
 #endif

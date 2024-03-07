@@ -18,3 +18,14 @@ I will implement today's second: ft_strnstr() which has no man but has descripti
 
 And I need to go back to TDD...
 And switch off the GitHub Copilot... my mind is way tooo lazy to analyze the code it is suggesting...
+
+## 5th March 2024
+Ok, so far so good, consistent writing of 2 functions per day. I even managed to start on the difficult ones - the ones playing with memory...
+
+And unfortunatelly writing tests for them run me into segmentation faults.
+
+As the time is limited, for those functions I will rely on the [testing from previus Core students](https://github.com/Tripouille/libftTester).
+
+I also found [usefull link](https://www.geeksforgeeks.org/how-to-clear-ram-memory-cache-buffer-and-swap-space-on-linux/) to clearing up Linux memory in between segmentation faults tests.
+
+Conclusion - starting from ft_memset I won't be writing tests for my funcitons - complete the whole Part 1 and trigger libftTester linked above.
