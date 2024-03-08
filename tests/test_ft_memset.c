@@ -16,9 +16,9 @@
 
 void	test_ft_memset(void)
 {
-	char	array[25];
-	char	*ptr;
-	int		i;
+	char		array[25];
+	char		*ptr;
+	size_t		i;
 
 	ptr = array;
 	ft_bzero(array, 100);

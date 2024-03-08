@@ -14,9 +14,9 @@
 
 void	test_ft_memchr(void)
 {
-	unsigned char	ptr[20]; // 20 baits memory block
-	int				c; // value to look for
-	void			*result; // resulting pointer
+	unsigned char	ptr[20];
+	int				c;
+	void			*result;
 	size_t			size;
 
 	size = 20;

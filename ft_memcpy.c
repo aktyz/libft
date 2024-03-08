@@ -17,8 +17,10 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 	unsigned int	*dest_ptr;
 	unsigned int	*src_ptr;
 
-	if(dest == (void *) 0 || src == (void *) 0)
+	if (dest == (void *) 0 || src == (void *) 0)
+	{
 		return (dest);
+	}
 	dest_ptr = (unsigned int *) dest;
 	src_ptr = (unsigned int *) src;
 	while (n > 0)

@@ -22,8 +22,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*ptr;
-	int		length;
+	char		*ptr;
+	size_t		length;
 
 	ptr = (char *)s;
 	length = ft_strlen(ptr);
