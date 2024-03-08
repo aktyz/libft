@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zslowian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 14:27:12 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/02 14:28:31 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/08 21:41:35 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned char c)
+int	ft_isascii(int c)
 {
 	if (c < 128)
 		return (c);
