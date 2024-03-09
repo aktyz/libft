@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_putstr_fd.c                                :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/09 11:39:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 12:27:05 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/09 12:10:51 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/09 12:23:22 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_libft.h"
+#include "libft.h"
 
-void	test_ft_putstr_fd(void)
+//TODO: add ft_atoi()
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	printf("\nTesting ft_putstr_fd\n");
-	printf("Empty string:\n");
-	ft_putstr_fd("", 1);
-	printf("Some string in printf\n");
-	ft_putstr_fd("Some string in ft_putstr_fd", 1);
-	ft_putstr_fd("String\t with \n non-printables\n", 1);
+	ft_putchar_fd((char)n + 48, fd);
 }

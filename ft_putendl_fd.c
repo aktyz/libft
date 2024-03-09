@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 11:57:07 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 11:58:18 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/09 12:24:03 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_putendl_fd(char *s, int fd)
 		ft_putchar_fd((int)*s, fd);
 		s++;
 	}
-    ft_putchar_fd('\n', fd);
+	ft_putchar_fd('\n', fd);
 }
