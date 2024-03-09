@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   test_ft_putstr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 11:43:15 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/09 11:39:11 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/09 11:50:09 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_strnstr();
-	// test_ft_memset();
-	*/
-
-int	main(void)
+void	test_ft_putstr_fd(void)
 {
-	printf("\n*** STARTING TESTS ***\n\n");
-	test_ft_putchar_fd();
-	test_ft_putstr_fd();
-	printf("\nAll tests passed!\n\n");
-	return (0);
+	printf("\nTesting ft_strchr\n");
+    printf("Empty string:\n");
+	ft_putstr_fd("", 1);
+    printf("Some string in printf\n");
+    ft_putstr_fd("Some string in ft_putstr_fd", 1);
+    ft_putstr_fd("String\t with \n non-printables\n", 1);
 }
