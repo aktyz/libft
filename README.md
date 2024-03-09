@@ -29,3 +29,10 @@ As the time is limited, for those functions I will rely on the [testing from pre
 I also found [usefull link](https://www.geeksforgeeks.org/how-to-clear-ram-memory-cache-buffer-and-swap-space-on-linux/) to clearing up Linux memory in between segmentation faults tests.
 
 Conclusion - starting from ft_memset I won't be writing tests for my funcitons - complete the whole Part 1 and trigger libftTester linked above.
+
+## 9th March 2024
+
+9 FUNCTIONS TO GO!!!!
+Kind of hard to decide which one shouls I work on now. Maybe the best idea is to go grab a lunch somewhere...
+
+And then I will come back to add ft_itoa() necessary to finish my ft_putnbr_fd().
