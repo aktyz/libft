@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 13:10:02 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 14:59:54 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/09 15:47:07 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	ptr = (char *)&s[start];
 	substring = (char *)malloc((len + 1) * sizeof(char));
-	if (start > ft_strlen((char *)s) + 1 || ptr == NULL)
+	if (start > ft_strlen((char *)s) + 1 || !ptr)
 		return (0);
 	i = 0;
 	while (*ptr != '\0' && i < len)

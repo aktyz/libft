@@ -30,7 +30,7 @@ char	*ft_strdup(char *src)
 	length = ft_strlen(src);
 	necessary_memory = sizeof(char) * (length + 1);
 	ptr = (char *)malloc(necessary_memory);
-	if (ptr == 0)
+	if (!ptr)
 		return (0);
 	else
 	{
