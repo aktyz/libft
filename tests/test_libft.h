@@ -29,6 +29,7 @@ void	test_ft_strnstr(void);
 void	test_ft_strlcpy(void);
 void	test_ft_strlcat(void);
 void	test_ft_strdup(void);
+void	test_ft_substr(void);
 
 void	test_ft_bzero(void);
 void	test_ft_memset(void);

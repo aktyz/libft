@@ -35,4 +35,4 @@ Conclusion - starting from ft_memset I won't be writing tests for my funcitons -
 9 FUNCTIONS TO GO!!!!
 Kind of hard to decide which one shouls I work on now. Maybe the best idea is to go grab a lunch somewhere...
 
-And then I will come back to add ft_itoa() necessary to finish my ft_putnbr_fd().
+And then I will come back to add ft_substr() and ft_itoa() necessary to finish my ft_putnbr_fd().
