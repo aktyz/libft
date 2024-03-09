@@ -36,5 +36,6 @@ void	test_ft_memchr(void);
 
 void	test_ft_putchar_fd(void);
 void    test_ft_putstr_fd(void);
+void	test_ft_putendl_fd(void);
 
 #endif

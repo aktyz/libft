@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   test_ft_putendl_fd.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/09 11:36:14 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 11:58:45 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/09 11:59:12 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/09 12:07:04 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "test_libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	test_ft_putendl_fd(void)
 {
-	while (*s != '\0')
-	{
-		ft_putchar_fd((int)*s, fd);
-		s++;
-	}
+	printf("\nTesting ft_putendl_fd\n");
+	printf("Empty string:\n");
+	ft_putendl_fd("", 1);
+	printf("Some string in printf\n");
+	ft_putendl_fd("Some string in ft_putendl_fd", 1);
+	ft_putendl_fd("String\t with \n non-printables\n", 1);
 }

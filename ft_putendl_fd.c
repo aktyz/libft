@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/09 11:36:14 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 11:58:45 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/09 11:57:07 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/09 11:58:18 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s != '\0')
 	{
 		ft_putchar_fd((int)*s, fd);
 		s++;
 	}
+    ft_putchar_fd('\n', fd);
 }
