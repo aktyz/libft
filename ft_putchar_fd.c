@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 11:31:03 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/09 11:14:44 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/09 11:22:58 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_libft.h"
+#include "libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_strnstr();
-	// test_ft_memset();
-	*/
-
-int	main(void)
+void	ft_putchar_fd(char c, int fd)
 {
-	printf("\n*** STARTING TESTS ***\n\n");
-	test_ft_putchar_fd();
-	printf("\nAll tests passed!\n\n");
-	return (0);
+	write(fd, &c, sizeof(c));
 }

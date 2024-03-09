@@ -34,4 +34,6 @@ void	test_ft_bzero(void);
 void	test_ft_memset(void);
 void	test_ft_memchr(void);
 
+void	test_ft_putchar_fd(void);
+
 #endif

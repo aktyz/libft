@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/08 20:03:17 by zslowian         ###   ########.fr        #
+#    Updated: 2024/03/09 11:29:59 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ cp ../ft_memcpy.c ./ft_memcpy.c
 cp ../ft_memmove.c ./ft_memmove.c
 cp ../ft_memchr.c ./ft_memchr.c
 cp ../ft_memcmp.c ./ft_memcmp.c
+cp ../ft_putchar_fd.c ./ft_putchar_fd.c
 
 # Compile with appropriate flags
 cc -Wall -Wextra -Werror *.c -o tests.out
@@ -65,5 +66,6 @@ rm ./ft_memcpy.c
 rm ./ft_memmove.c
 rm ./ft_memchr.c
 rm ./ft_memcmp.c
+rm ./ft_putchar_fd.c
 
 rm ./tests.out

@@ -6,14 +6,15 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/08 21:47:19 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/09 11:33:36 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
+# include <stdlib.h> //malloc, free
+# include <unistd.h> //write, size_t
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -25,6 +26,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 void	ft_bzero(void *s, size_t n);
+void	ft_putchar_fd(char c, int fd);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);

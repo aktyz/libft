@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   test_ft_putchar_fd.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 11:31:03 by zslowian         ###   ########.fr       */
+/*   Created: 2024/03/09 11:21:39 by zslowian          #+#    #+#             */
+/*   Updated: 2024/03/09 11:34:02 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_strnstr();
-	// test_ft_memset();
-	*/
-
-int	main(void)
+void	test_ft_putchar_fd(void)
 {
-	printf("\n*** STARTING TESTS ***\n\n");
-	test_ft_putchar_fd();
-	printf("\nAll tests passed!\n\n");
-	return (0);
+	printf("\nTesting ft_strchr\n");
+	ft_putchar_fd('Z', 1);
+	ft_putchar_fd('y', 1);
+	ft_putchar_fd('t', 1);
+	ft_putchar_fd('k', 1);
+	ft_putchar_fd('a', 1);
+	ft_putchar_fd('\n', 1);
 }
