@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 15:28:34 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/09 22:02:52 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:48:58 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,76 +20,65 @@ return value: The string representing the integer
 NULL if allocation fails
 */
 
-static int	ft_write_minus(char *ptr, int n);
-static char	*ft_nbr_to_str(char *ptr, int n);
+static char	*ft_nbr_to_str(int n, int len, int is_negative);
+static int	get_num_of_char(int n, int is_negative);
 
 char	*ft_itoa(int n)
 {
-	char	*ptr;
+	int		len;
+	int		is_negative;
+	
+	if (!n)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	is_negative = 0;
+	if (n < 0)
+	{
+		is_negative = 1;
+		n = -n;
+	}
+	len = get_num_of_char(n, is_negative);
+	return (ft_nbr_to_str(n, len, is_negative));
+}
 
-	ptr = (char *)malloc(sizeof(char) * 13);
+static char	*ft_nbr_to_str(int n, int len, int is_negative)
+{
+	char	*ptr;
+	
+	ptr = (char *)malloc(sizeof(char) * len);
 	if (!ptr)
 		return (0);
-	if (!n)
-		return (ft_memcpy(ptr, "0", 2));
-	if (n == -2147483648)
-		return (ft_memcpy(ptr, "-2147483648", 13));
-	n = ft_write_minus(ptr, n);
-	ptr = ft_nbr_to_str(ptr, n);
+	ptr[len - 1] = '\0';
+	len--;
+	while (n > 0 && len > 0)
+	{
+		ptr[len - 1] = (n % 10) + 48;
+		n = n / 10;
+		len--;
+	}
+	if(is_negative && len > 0)
+		ptr[0] = '-';
 	return (ptr);
 }
 
-static int	ft_write_minus(char *ptr, int n)
-{
-	if (n < 0)
-	{
-		ptr[0] = '-';
-		return (-n);
-	}
-	else
-	{
-		ptr[0] = '+';
-		return (n);
-	}
-}
+/*
+	get_num_of_char counts the necessary chars
+	to put a number into a String
+	it counts in the '\0';
+*/
 
-static char	*ft_nbr_to_str(char *ptr, int n)
+static int	get_num_of_char(int n, int is_negative)
 {
 	int	i;
 
-	i = 12;
-	ptr[i] = '\0';
-	while (i > 0)
+	i = 1;
+	while (n > 0)
 	{
-		ft_putchar_fd(ptr[i], 1);
-		i--;
-	}
-	i = 11;
-	while (n > 0 && i > 0)
-	{
-		ptr[i] = (n % 10) + 48;
+		i++;
 		n = n / 10;
-		i--;
 	}
-	while (i >= 0)
-	{
-		ptr[i] = '+';
-		i--;
-	}
-	return (ptr);
+	if (is_negative)
+		i++;
+	return (i);
 }
-
-// static char	*ft_print_array_content(char *ptr, size_t size)
-// {
-// 	char	*s;
-
-// 	s = ptr;
-// 	ft_putstr_fd("\nPrinting array content:\n", 1);
-// 	while (size > 0)
-// 	{
-// 		ft_putchar_fd(*s, 1);
-// 		s++;
-// 		size--;
-// 	}
-// 	return(ptr);
-// }

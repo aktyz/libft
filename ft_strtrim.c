@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 14:41:38 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 16:07:24 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:14:51 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*new_str(char const *s1, size_t start, size_t len)
 		return (ft_strdup(""));
 	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
-		return (NULL);
+		return (0);
 	i = 0;
     while (i < len)
     {
