@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 16:14:06 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/23 19:17:26 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	main(void)
 {
 	printf("\n*** STARTING TESTS ***\n\n");
-	test_ft_itoa();
+	test_ft_atoi();
 	printf("\nAll tests completed!\n\n");
 	return (0);
 }

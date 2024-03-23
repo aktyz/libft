@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 15:26:44 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 16:14:31 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/23 19:13:45 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char *ptr;
-	size_t i;
+	unsigned char	*ptr;
+	size_t			i;
+
 	ptr = (unsigned char *)malloc(nmemb * size);
 	i = 0;
 	if (!ptr)

@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 15:28:34 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 17:48:58 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/23 19:11:33 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_itoa(int n)
 {
 	int		len;
 	int		is_negative;
-	
+
 	if (!n)
 		return (ft_strdup("0"));
 	if (n == -2147483648)
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 static char	*ft_nbr_to_str(int n, int len, int is_negative)
 {
 	char	*ptr;
-	
+
 	ptr = (char *)malloc(sizeof(char) * len);
 	if (!ptr)
 		return (0);
@@ -57,7 +57,7 @@ static char	*ft_nbr_to_str(int n, int len, int is_negative)
 		n = n / 10;
 		len--;
 	}
-	if(is_negative && len > 0)
+	if (is_negative && len > 0)
 		ptr[0] = '-';
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 14:41:38 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 16:14:51 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/23 19:12:55 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,10 @@ static char	*new_str(char const *s1, size_t start, size_t len)
 	if (!str)
 		return (0);
 	i = 0;
-    while (i < len)
-    {
-        str[i] = s1[start + i];
-        i++;
-    }
-    return (str);
+	while (i < len)
+	{
+		str[i] = s1[start + i];
+		i++;
+	}
+	return (str);
 }
