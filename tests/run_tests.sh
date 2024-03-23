@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/23 15:39:11 by zslowian         ###   ########.fr        #
+#    Updated: 2024/03/23 18:09:04 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,8 @@ cp ../ft_itoa.c ./ft_itoa.c
 cp ../ft_strjoin.c ./ft_strjoin.c
 cp ../ft_strtrim.c ./ft_strtrim.c
 cp ../ft_calloc.c ./ft_calloc.c
+cp ../ft_striteri.c ./ft_striteri.c
+cp ../ft_strmapi.c ./ft_strmapi.c
 
 # Compile with appropriate flags
 cc -Wall -Wextra -Werror *.c -o tests.out
@@ -83,5 +85,7 @@ rm ./ft_itoa.c
 rm ./ft_strjoin.c
 rm ./ft_strtrim.c
 rm ./ft_calloc.c
+rm ./ft_striteri.c
+rm ./ft_strmapi.c
 
 rm ./tests.out
