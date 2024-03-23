@@ -27,15 +27,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	length = ft_join_len(s1, s2);
 	i = 0;
 	iterator = (char *)s1;
-	new_string = (char *)malloc((s1_len + s2_len + 1) * (char));
-	while (iterator != '\0')
+	new_string = (char *)malloc(sizeof(char) * (length + 1));
+	while (*iterator != '\0')
 	{
 		new_string[i] = *iterator;
 		iterator++;
 		i++;
 	}
 	iterator = (char *)s2;
-	while (iterator != '\0')
+	while (*iterator != '\0')
 	{
 		new_string[i] = *iterator;
 		iterator++;

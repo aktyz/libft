@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/09 16:18:36 by zslowian         ###   ########.fr        #
+#    Updated: 2024/03/23 13:39:21 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ cp ../ft_putendl_fd.c ./ft_putendl_fd.c
 cp ../ft_putnbr_fd.c ./ft_putnbr_fd.c
 cp ../ft_substr.c ./ft_substr.c
 cp ../ft_itoa.c ./ft_itoa.c
+cp ../ft_strjoin.c ./ft_strjoin.c
 
 # Compile with appropriate flags
 cc -Wall -Wextra -Werror *.c -o tests.out
@@ -77,5 +78,6 @@ rm ./ft_putendl_fd.c
 rm ./ft_putnbr_fd.c
 rm ./ft_substr.c
 rm ./ft_itoa.c
+rm ./ft_strjoin.c
 
 rm ./tests.out
