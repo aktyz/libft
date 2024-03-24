@@ -27,7 +27,7 @@ char	*ft_strdup(char *src)
 	size_t	length;
 	size_t	necessary_memory;
 
-	length = ft_strlen(src);
+	length = ft_strlen((const char *)src);
 	necessary_memory = sizeof(char) * (length + 1);
 	ptr = (char *)malloc(necessary_memory);
 	if (!ptr)

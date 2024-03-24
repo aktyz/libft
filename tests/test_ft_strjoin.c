@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 13:32:10 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 14:37:39 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/24 21:21:53 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,21 @@ void	test_ft_strjoin(void)
 	strcpy(source2, "second string");
 	destination = ft_strjoin(source1, source2);
 	printf("1. Joining \"%s\" with \"%s\", dest: \"%s\",of length: %lu\n",
-		source1, source2, destination, ft_strlen(destination));
+		source1, source2, destination, ft_strlen((const char *)destination));
 	strcpy(source1, "First string joined with ");
 	strcpy(source2, "");
 	destination = ft_strjoin(source1, source2);
 	printf("2. Joining \"%s\" with empty string, dest: \"%s\",of length: %lu\n",
-		source1, destination, ft_strlen(destination));
+		source1, destination, ft_strlen((const char *)destination));
 	strcpy(source1, "");
 	strcpy(source2, "second string");
 	destination = ft_strjoin(source1, source2);
 	printf("3. Joining empty string with \"%s\", dest: \"%s\",of length: %lu\n",
-		source2, destination, ft_strlen(destination));
+		source2, destination, ft_strlen((const char *)destination));
 	strcpy(source1, "");
 	strcpy(source2, "");
 	destination = ft_strjoin(source1, source2);
 	printf("4. Joining two empty strings, dest: \"%s\",of length: %lu\n",
-		destination, ft_strlen(destination));
+		destination, ft_strlen((const char *)destination));
 	free(destination);
 }

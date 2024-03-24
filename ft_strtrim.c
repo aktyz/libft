@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 14:41:38 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 19:12:55 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/24 21:20:16 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	end;
 
 	start = 0;
-	end = ft_strlen((char *)s1) - 1;
+	end = ft_strlen((const char *)s1) - 1;
 	if (end == -1)
 		return (ft_strdup(""));
 	while (to_trim(s1[start], set))
@@ -50,7 +50,7 @@ static char	*new_str(char const *s1, size_t start, size_t len)
 	char	*str;
 	size_t	i;
 
-	if (len <= 0 || start >= ft_strlen((char *)s1))
+	if (len <= 0 || start >= ft_strlen((const char *)s1))
 		return (ft_strdup(""));
 	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)

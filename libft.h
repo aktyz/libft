@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/24 20:17:50 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/24 21:17:07 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char	**ft_split(char const *s, char c);
 
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 

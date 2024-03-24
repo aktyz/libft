@@ -23,10 +23,25 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char		*ptr;
+
+	ptr = NULL;
+	while (*s)
+	{
+		if (*s == (char)c)
+			ptr = (char *)s;
+		s++;
+	}
+	if (*s == (char)c)
+		return ((char *)s);
+	return (ptr);
+}
+/* char	*ft_strrchr(const char *s, int c)
+{
+	char		*ptr;
 	size_t		length;
 
 	ptr = (char *)s;
-	length = ft_strlen(ptr);
+	length = ft_strlen(s);
 	if (c == '\0')
 	{
 		return (ptr + length);
@@ -43,4 +58,4 @@ char	*ft_strrchr(const char *s, int c)
 		else
 			return (0);
 	}
-}
+} */

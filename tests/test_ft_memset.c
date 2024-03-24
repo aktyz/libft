@@ -27,7 +27,7 @@ void	test_ft_memset(void)
 	strcpy(array, "jkjkjkjkjkjkjkjkjkjkjk\n");
 	ft_memset(array, 90, 0);
 	printf("\n%s\n", array);
-	i = ft_strlen(array);
+	i = ft_strlen((const char *)array);
 	ptr = ft_memset(array, 90, i);
 	printf("\nResulting memory dump: %s\n", ptr);
 	printf("Testing ft_memset ended.\n");

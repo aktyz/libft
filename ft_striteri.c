@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 18:01:44 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 18:10:00 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/24 21:18:19 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	int	len;
 
 	i = 0;
-	len = ft_strlen(s);
+	len = ft_strlen((const char *)s);
 	while (i < len)
 	{
 		(*f)(i, &s[i]);

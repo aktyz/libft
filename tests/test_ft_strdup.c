@@ -21,23 +21,23 @@ void	test_ft_strdup(void)
 	printf("\nTesting ft_strdup\n");
 	destination = ft_strdup(source);
 	printf("1. Duplicating uninitialized string, dest: \"%s\",of length: %lu\n",
-		destination, ft_strlen(destination));
+		destination, ft_strlen((const char *)destination));
 	strcpy(source, "");
 	destination = ft_strdup(source);
 	printf("2. Empty string dup: \"%s\", of length: %lu\n",
-		destination, ft_strlen(destination));
+		destination, ft_strlen((const char *)destination));
 	strcpy(source, "My string");
 	destination = ft_strdup(source);
 	printf("3. String duplicate: \"%s\", of length: %lu\n",
-		destination, ft_strlen(destination));
+		destination, ft_strlen((const char *)destination));
 	strcpy(source, "Hello, World!");
 	destination = ft_strdup(source);
 	printf("4. String duplicate: \"%s\", of length: %lu\n",
-		destination, ft_strlen(destination));
+		destination, ft_strlen((const char *)destination));
 	strcpy(source,
 		"This is a longer string to test the function with a larger input.");
 	destination = ft_strdup(source);
 	printf("5. Empty string dup: \"%s\", of length: %lu\n",
-		destination, ft_strlen(destination));
+		destination, ft_strlen((const char *)destination));
 	free(destination);
 }

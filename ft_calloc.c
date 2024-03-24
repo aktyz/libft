@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 15:26:44 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 19:13:45 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/24 21:33:28 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,29 @@
 	or a unique pointer value that can later be successfully passed to free()
 
 */
+
 void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*ptr;
+	size_t	t_size;
+
+	if (nmemb == 0 || size == 0)
+	{
+		nmemb = 1;
+		size = 1;
+	}
+	if (nmemb > 2147483647 / size)
+		return (0);
+	t_size = nmemb * size;
+	ptr = (void *) malloc (t_size);
+	if (!ptr)
+		return (0);
+	while (t_size--)
+		((char *)ptr)[t_size] = 0;
+	return (ptr);
+}
+
+/* void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*ptr;
 	size_t			i;
@@ -34,4 +56,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		i++;
 	}
 	return (ptr);
-}
+} */

@@ -22,11 +22,22 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	while (*s != (char)c)
+	{
+		if (!*s)
+			return (0);
+		s++;
+	}
+	return ((char *)s);
+}
+
+/* char	*ft_strchr(const char *s, int c)
+{
 	char		*ptr;
 	size_t		length;
 
 	ptr = (char *)s;
-	length = ft_strlen(ptr);
+	length = ft_strlen(s);
 	if (c == '\0')
 	{
 		return (ptr + length);
@@ -43,3 +54,4 @@ char	*ft_strchr(const char *s, int c)
 			return (0);
 	}
 }
+ */
