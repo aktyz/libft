@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 14:27:12 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/24 18:17:01 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/24 20:31:17 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_isascii(int c)
 {
 	if (c == 0)
 		return (1);
-	if (c < 128)
+	if (c > 0 && c < 128)
 		return (c);
 	else
 		return (0);
