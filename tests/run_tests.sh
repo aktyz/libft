@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/23 19:16:51 by zslowian         ###   ########.fr        #
+#    Updated: 2024/03/24 16:13:58 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ cp ../ft_calloc.c ./ft_calloc.c
 cp ../ft_striteri.c ./ft_striteri.c
 cp ../ft_strmapi.c ./ft_strmapi.c
 cp ../ft_atoi.c ./ft_atoi.c
+cp ../ft_split.c ./ft_split.c
 
 # Compile with appropriate flags
 cc -Wall -Wextra -Werror *.c -o tests.out
@@ -89,5 +90,6 @@ rm ./ft_calloc.c
 rm ./ft_striteri.c
 rm ./ft_strmapi.c
 rm ./ft_atoi.c
+rm ./ft_split.c
 
 rm ./tests.out
