@@ -27,11 +27,11 @@ char	**ft_split(char const *s, char c)
 	result = ft_calloc((ft_word_count(s, c) + 1), sizeof(char *));
 	if (!result)
 		return (0);
-	while (i <= ft_strlen(s))
+	while (i <= ft_strlen((char *)s))
 	{
 		if (s[i] != c && word_start < 0)
 			word_start = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && word_start >= 0)
+		else if ((s[i] == c || i == ft_strlen((char *)s)) && word_start >= 0)
 		{
 			ft_strlcpy(result[j], (const char *)s, i - word_start + 1);
 			if (!result[j])
