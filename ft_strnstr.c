@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*	The strnstr() function locates the first occurrence of the null-termi-
 	nated  string little in the string big, where not more than len charac-
@@ -23,22 +22,23 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		result;
-	size_t	size;
+	size_t	i;
+	size_t	j;
 
-	size = ft_strlen((char *)little) + 1;
-	if (*little == '\0')
+	i = 0;
+	j = 0;
+	if (!*little)
 		return ((char *) big);
-	while (*big != '\0' && len > 0)
+	while (big[i] && i < len)
 	{
-		if (*big == *little)
+		while (big[i + j] == little[j] && i + j < len)
 		{
-			result = ft_strncmp(big, little, size);
-			if (result >= 0)
-				return ((char *) big);
+			if (!little[j + 1])
+				return ((char *)big + i);
+			j++;
 		}
-		big++;
-		len--;
+		j = 0;
+		i++;
 	}
 	return (0);
 }

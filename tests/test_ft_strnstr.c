@@ -14,12 +14,12 @@
 
 void	test_ft_strnstr(void)
 {
-	char	big[14];
+	char	big[30];
 	char	little[10];
 	char	*result;
 
 	printf("\nTesting ft_strnstr\n");
-	strcpy(big, "Foo Bar Baz");
+/* 	strcpy(big, "Foo Bar Baz");
 	strcpy(little, "Bar");
 	result = ft_strnstr(big, little, 5);
 	printf("1. String \"%s\" is on \"%s\" position in \"%s\"\n",
@@ -50,5 +50,18 @@ void	test_ft_strnstr(void)
 	strcpy(little, "other");
 	result = ft_strnstr(big, little, 12);
 	printf("9. String \"%s\" is on \"%s\" position in \"%s\"\n",
+		little, result, big); */
+	strcpy(big, "lorem ipsum dolor sit amet");
+	strcpy(little, "ipsumm");
+	result = ft_strnstr(big, little, 30);
+	printf("10. String \"%s\" is on \"%s\" position in \"%s\"\n",
 		little, result, big);
+	/* strcpy(little, "sit");
+	result = ft_strnstr(big, little, 10);
+	printf("11. String \"%s\" is on \"%s\" position in \"%s\"\n",
+		little, result, big);
+	strcpy(little, "dolor");
+	result = ft_strnstr(big, little, 15);
+	printf("12. String \"%s\" is on \"%s\" position in \"%s\"\n",
+		little, result, big); */
 }

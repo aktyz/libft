@@ -15,31 +15,31 @@
 /* This function concatenate the input string into a
 	destination string. If the destination buffer, limited by
 	its size, isn't large enough to hold the concatenation,
-	the	resulting string is truncated (but it is guaranteed
+	the resulting string is truncated (but it is guaranteed
 	to be null-terminated).
 	It returns the length of the total string it tried
 	to create.
 
 	The function returns the length of the total string
-	that it tried to create (as if truncation didn't occur). */
+	that it tried to create (as if truncation didn't occur).
+*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char	*ptr;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
 
-	ptr = dst;
-	while (*ptr != '\0')
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen((char *)src);
+	i = 0;
+	if (size <= dst_len)
+		return (size + src_len);
+	while (i < size - dst_len - 1 && src[i] != '\0')
 	{
-		ptr++;
-		size--;
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	while (*src != '\0' && size > 1)
-	{
-		*ptr = *src;
-		ptr++;
-		src++;
-		size--;
-	}
-	*ptr = '\0';
-	return (ft_strlen(dst));
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }

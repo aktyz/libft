@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 14:29:14 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/08 21:42:11 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/03/24 18:11:13 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,6 @@ void	test_ft_isascii(void)
 	printf("5. Character \' \' ft_isascii result: %d\n", result);
 	result = ft_isascii((int)EOF);
 	printf("6. Character \'EOF\' ft_isascii result: %d\n", result);
+	result = ft_isascii(0);
+	printf("5. Int 0 ft_isascii result: %d\n", result);
 }
