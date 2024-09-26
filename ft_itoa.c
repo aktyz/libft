@@ -6,12 +6,11 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 15:28:34 by zslowian          #+#    #+#             */
-/*   Updated: 2024/03/23 19:11:33 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/09/26 21:19:08 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /* Allocates with malloc and returns a string representing the integer
 received as an argument. Negative numbers must be handled

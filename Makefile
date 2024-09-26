@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/24 16:24:47 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/24 16:52:10 by zslowian         ###   ########.fr        #
+#    Updated: 2024/09/26 22:21:33 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,18 @@ SRCS =	ft_tolower.c \
 		ft_atoi.c \
 		ft_split.c \
 
+BSRCS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+
 OBJS = $(SRCS:.c=.o)
+BOBJS = $(BSRCS:.c=.o)
 
 HEADER = ./
 
@@ -64,11 +75,17 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
+bonus: $(OBJS) $(BOBJS)
+	@ar cr $(NAME) $(OBJS) $(BOBJS)
+
 fclean: clean
 	@rm -f $(NAME)
 
 clean:
 	@rm -f $(OBJS)
+
+bonus_clean:
+	@rm -f $(BOBJS)
 
 re: fclean all
 
