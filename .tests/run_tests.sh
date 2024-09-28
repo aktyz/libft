@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:46:04 by zslowian          #+#    #+#              #
-#    Updated: 2024/03/24 16:13:58 by zslowian         ###   ########.fr        #
+#    Updated: 2024/09/28 19:22:56 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,9 +47,18 @@ cp ../ft_striteri.c ./ft_striteri.c
 cp ../ft_strmapi.c ./ft_strmapi.c
 cp ../ft_atoi.c ./ft_atoi.c
 cp ../ft_split.c ./ft_split.c
+cp ../ft_lstnew.c ./ft_lstnew.c
+cp ../ft_lstadd_front.c ./ft_lstadd_front.c
+cp ../ft_lstsize.c ./ft_lstsize.c
+cp ../ft_lstlast.c ./ft_lstlast.c
+cp ../ft_lstadd_back.c ./ft_lstadd_back.c
+cp ../ft_lstdelone.c ./ft_lstdelone.c
+cp ../ft_lstclear.c ./ft_lstclear.c
+cp ../ft_lstiter.c ./ft_lstiter.c
+cp ../ft_lstmap.c ./ft_lstmap.c
 
 # Compile with appropriate flags
-cc -Wall -Wextra -Werror *.c -o tests.out
+cc -Wall -Wextra -Werror *.c -g -o tests.out
 
 # Run your tests
 ./tests.out
@@ -91,5 +100,14 @@ rm ./ft_striteri.c
 rm ./ft_strmapi.c
 rm ./ft_atoi.c
 rm ./ft_split.c
+rm ./ft_lstnew.c
+rm ./ft_lstadd_front.c
+rm ./ft_lstsize.c
+rm ./ft_lstlast.c
+rm ./ft_lstadd_back.c
+rm ./ft_lstdelone.c
+rm ./ft_lstclear.c
+rm ./ft_lstiter.c
+rm ./ft_lstmap.c
 
 rm ./tests.out

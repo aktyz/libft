@@ -45,4 +45,6 @@ void	test_ft_putnbr_fd(void);
 void	test_ft_itoa(void);
 void	test_ft_atoi(void);
 
+void	test_ft_lstlast(void);
+
 #endif

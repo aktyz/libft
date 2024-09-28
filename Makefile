@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/24 16:24:47 by zslowian          #+#    #+#              #
-#    Updated: 2024/09/26 22:21:33 by zslowian         ###   ########.fr        #
+#    Updated: 2024/09/28 19:24:14 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,7 +82,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(BOBJS)
 
 bonus_clean:
 	@rm -f $(BOBJS)
