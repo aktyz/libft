@@ -16,6 +16,18 @@ Next, when compiling your project code, add the required flags:
 -lft -L <path/to/libft.a> -I <path/to/libft.h>
 ```
 
+# Short notes on Makefiles
+
+A simple makefile consists of "rules" with the following shape:
+```
+target ... : prerequisites ...
+	recipe
+	...
+	...
+```
+
+<i>I stopped at 3.1 [What Makefiles Contain](https://www.gnu.org/software/make/manual/make.html#Makefile-Contents)</i>
+
 ## My Notes when progressing through Libft
 
 ### 3rd March 2024
