@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   test_ft_lstnew.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/09/29 16:10:49 by zslowian         ###   ########.fr       */
+/*   Created: 2024/09/29 15:41:27 by zslowian          #+#    #+#             */
+/*   Updated: 2024/09/29 16:18:33 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "test_libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_memset();
-	*/
-
-int	main(void)
+void	test_ft_lstnew(void)
 {
-	printf("\n*** STARTING TESTS ***\n\n");
-	test_ft_lstlast();
-	test_ft_lstnew();
-	printf("\nAll tests completed!\n\n");
-	return (0);
+	t_list	*my_list;
+
+	my_list = ft_lstnew((void *)42);
+	printf("\nTesting ft_lstnew\n");
+	printf("\n1. Testing one element list\n");
+	if (my_list->content != (void *)42 || my_list->next != 0)
+		printf("1. Creating one element list failed");
 }

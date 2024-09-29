@@ -46,5 +46,6 @@ void	test_ft_itoa(void);
 void	test_ft_atoi(void);
 
 void	test_ft_lstlast(void);
+void    test_ft_lstnew(void);
 
 #endif
