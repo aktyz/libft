@@ -26,7 +26,32 @@ target ... : prerequisites ...
 	...
 ```
 
-<i>I stopped at 3.1 [What Makefiles Contain](https://www.gnu.org/software/make/manual/make.html#Makefile-Contents)</i>
+Knowledge used in Makefile:
+For examples have a look at the actual [Makefile](Makefile) in this project.
+- [The foreach Function](https://ocw.mit.edu/courses/1-124j-foundations-of-software-engineering-fall-2000/pages/lecture-notes/gnu_makefile_documentation/#TOC79)
+```
+$(foreach var, list, text)
+```
+The first two arguments, var and list, are expanded before anything else is done; note that the last argument, text, is not expanded at the same time. Then for each word of the expanded value of list, the variable named by the expanded value of var is set to that word, and text is expanded. Presumably text contains references to that variable, so its expansion will be different each time.
+The result is that text is expanded as many times as there are whitespace-separated words in list. The multiple expansions of text are concatenated, with spaces between them, to make the result of foreach.
+- [The Function wildcard](https://ocw.mit.edu/courses/1-124j-foundations-of-software-engineering-fall-2000/pages/lecture-notes/gnu_makefile_documentation/#TOC25)
+```
+$(wildcard pattern...)
+```
+This string, used anywhere in a makefile, is replaced by a space-separated list of names of existing files that match one of the given file name patterns. If no existing file name matches a pattern, then that pattern is omitted from the output of the wildcard function. Note that this is different from how unmatched wildcards behave in rules, where they are used verbatim rather than ignored.
+- [Subst and Substitution References](https://ocw.mit.edu/courses/1-124j-foundations-of-software-engineering-fall-2000/pages/lecture-notes/gnu_makefile_documentation/#TOC77)
+```
+$(subst from, to, text)
+```
+Performs a textual replacement on the text text: each occurrence of from is replaced by to. The result is substituted for the function call.
+```
+$(var:pattern=replacement)
+```
+- [Function for File Name: addprefix](https://ocw.mit.edu/courses/1-124j-foundations-of-software-engineering-fall-2000/pages/lecture-notes/gnu_makefile_documentation/#TOC78)
+```
+$(addprefix prefix,names…)
+```
+
 
 ## My Notes when progressing through Libft
 
