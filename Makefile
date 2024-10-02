@@ -6,86 +6,46 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/24 16:24:47 by zslowian          #+#    #+#              #
-#    Updated: 2024/09/28 19:24:14 by zslowian         ###   ########.fr        #
+#    Updated: 2024/10/01 15:53:59 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS =	ft_tolower.c \
-		ft_toupper.c \
-		ft_isalpha.c \
-		ft_isdigit.c \
-		ft_isalnum.c \
-		ft_isascii.c \
-		ft_isprint.c \
-		ft_strlen.c \
-		ft_strchr.c \
-		ft_strncmp.c \
-		ft_strrchr.c \
-		ft_strnstr.c \
-		ft_strlcpy.c \
-		ft_strdup.c \
-		ft_strlcat.c \
-		ft_bzero.c \
-		ft_memset.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_putchar_fd.c \
-		ft_putstr_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_substr.c \
-		ft_itoa.c \
-		ft_strjoin.c \
-		ft_strtrim.c \
-		ft_calloc.c \
-		ft_striteri.c \
-		ft_strmapi.c \
-		ft_atoi.c \
-		ft_split.c \
+DIR_SRC = src
+DIR_OBJ = obj
 
-BSRCS = ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c \
-		ft_lstadd_back.c \
-		ft_lstdelone.c \
-		ft_lstclear.c \
-		ft_lstiter.c \
-		ft_lstmap.c \
+SUBDIR = is lst mem put str to
 
-OBJS = $(SRCS:.c=.o)
-BOBJS = $(BSRCS:.c=.o)
+SRC_DIR = $(foreach dir, $(SUBDIR), $(addprefix $(DIR_SRC)/, $(dir)))
+#SRC_DIR = ./src/is ./src/lst ./src/mem ./src/put ./src/str ./src/to
+OBJ_DIR = $(foreach dir, $(SUBDIR), $(addprefix $(DIR_OBJ)/, $(dir)))
+#OBJ_DIR = ./obj/is ./obj/lst ./obj/mem ./obj/put ./obj/str ./obj/to
+SRC = $(foreach dir, $(SRC_DIR), $(wildcard $(dir)/*.c))
+#SRC = ./src/is/ft_isalnum.c ... ./src/to/ft_toupper.c
+OBJ = $(subst $(DIR_SRC), $(DIR_OBJ), $(SRC:.c=.o))
 
-HEADER = ./
+INCLUDES = -I headers
 
-.c.o:
-	@$(CC) $(CFLAGS) -I $(HEADER) -c $< -o $@
+$(DIR_OBJ)/%.o: $(DIR_SRC)/%.c
+	@mkdir -p $(DIR_OBJ) $(OBJ_DIR)
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-$(NAME): $(OBJS)
-	@ar cr $(NAME) $(OBJS)
+$(NAME): $(OBJ)
+	@ar cr $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
 all: $(NAME)
 
-bonus: $(OBJS) $(BOBJS)
-	@ar cr $(NAME) $(OBJS) $(BOBJS)
-
 fclean: clean
 	@rm -f $(NAME)
+	@rm -fr $(DIR_OBJ)
 
 clean:
-	@rm -f $(OBJS) $(BOBJS)
-
-bonus_clean:
-	@rm -f $(BOBJS)
+	@rm -f $(OBJ)
 
 re: fclean all
 
