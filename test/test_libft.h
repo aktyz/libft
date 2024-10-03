@@ -60,4 +60,7 @@ void	test_minus_category(void);
 void	test_space_category(void);
 void	test_plus_category(void);
 
+// FT_GNL functions
+void	test_gnl(void);
+
 #endif

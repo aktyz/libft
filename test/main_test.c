@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/03 16:37:53 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/10/03 17:29:53 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,8 @@
 
 int	main(void)
 {
-	printf("\n*** STARTING TESTS ***\n\n");
-	test_char();
-	test_percent();
-	test_string();
-	testPointer();
-	test_minus();
-	test_single_integer();
-	test_dot_category();
-	test_minus_category();
-	test_space_category();
-	test_plus_category();
-	printf("\nAll tests completed!\n\n");
+	ft_printf("\n*** STARTING TESTS ***\n\n");
+	test_gnl();
+	ft_printf("\nAll tests completed!\n\n");
 	return (0);
 }

@@ -6,12 +6,16 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/03 16:14:12 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/10/03 19:16:39 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 
 # define BUF_SIZE 4096
 # define FLAGS "+ 0-#"
@@ -226,5 +230,8 @@ void	ft_itoa_buffer(t_data *data, t_value int_value);
 
 void	print_my_structure(char *ft_name, t_data *data);
 void	print_width_precision(char *ft_name, t_data *data);
+
+// GNL functions
+char	*get_next_line(int fd);
 
 #endif

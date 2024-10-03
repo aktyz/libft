@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/24 16:24:47 by zslowian          #+#    #+#              #
-#    Updated: 2024/10/03 16:42:48 by zslowian         ###   ########.fr        #
+#    Updated: 2024/10/03 19:25:39 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ DIR_SRC = src
 DIR_OBJ = obj
 DIR_TEST = test
 
-SUBDIR = ft_printf is lst main mem put str to
+SUBDIR = ft_printf gnl is lst main mem put str to
 
 SRC_DIR = $(foreach dir, $(SUBDIR), $(addprefix $(DIR_SRC)/, $(dir)))
 #SRC_DIR = ./src/is ./src/lst ./src/mem ./src/put ./src/str ./src/to
@@ -55,5 +55,8 @@ re: fclean all
 
 test: $(NAME)
 	cc -Wall -Werror -Wextra $(TEST_SRC) -L. -lft -I ./headers -o test.out
+
+debug: $(NAME)
+	cc -Wall -Werror -Wextra $(TEST_SRC) -g -L. -lft -I ./headers -o test.out
 
 .PHONY: all clean fclean re test
