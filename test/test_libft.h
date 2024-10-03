@@ -48,4 +48,16 @@ void	test_ft_atoi(void);
 void	test_ft_lstlast(void);
 void    test_ft_lstnew(void);
 
+// FT_PRINTF functions
+void	test_char(void);
+void	test_percent(void);
+void	test_string(void);
+void	testPointer(void);
+void	test_minus(void);
+void	test_single_integer(void);
+void	test_dot_category(void);
+void	test_minus_category(void);
+void	test_space_category(void);
+void	test_plus_category(void);
+
 #endif

@@ -9,7 +9,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/.tests/tests.out",
+            "program": "${workspaceFolder}/test.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
