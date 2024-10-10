@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/03 19:16:39 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/10/10 14:45:51 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ typedef enum e_error
 	OK = 0,
 	MALLOC_ERROR = -67,
 	PARSE_ERROR = -87,
+	DUPLICATION_ERROR = 1,
 }	t_error;
 
 /**
