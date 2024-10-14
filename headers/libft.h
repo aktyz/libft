@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/10 14:45:51 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/10/14 22:04:42 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,12 @@ typedef enum e_base
  * different level of the ft_printf function
  *
 */
-typedef enum e_error
+typedef enum e_libft_error
 {
 	OK = 0,
 	MALLOC_ERROR = -67,
 	PARSE_ERROR = -87,
-	DUPLICATION_ERROR = 1,
-}	t_error;
+}	t_libft_error;
 
 /**
  * Shorthand for the unsigned char type
@@ -184,6 +183,9 @@ void	*ft_memchr(const void *string, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+// MATH functions
+int		ft_min(int a, int b);
 
 // PUT/PRINT functions
 void	ft_putnbr_fd(int n, int fd);

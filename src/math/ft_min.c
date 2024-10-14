@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/14 21:57:03 by zslowian         ###   ########.fr       */
+/*   Created: 2024/10/14 21:54:30 by zslowian          #+#    #+#             */
+/*   Updated: 2024/10/14 21:55:45 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_libft.h"
+#include "libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_memset();
-	*/
-
-int	main(void)
+/**
+ * Function returning minimum of two numbers.
+ * 
+*/
+int	ft_min(int a, int b)
 {
-	ft_printf("\n*** STARTING TESTS ***\n\n");
-	test_ft_min();
-	ft_printf("\nAll tests completed!\n\n");
-	return (0);
+	if (a < b)
+		return (a);
+	else
+		return (b);
 }

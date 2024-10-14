@@ -48,6 +48,8 @@ void	test_ft_atoi(void);
 void	test_ft_lstlast(void);
 void    test_ft_lstnew(void);
 
+void	test_ft_min(void);
+
 // FT_PRINTF functions
 void	test_char(void);
 void	test_percent(void);
