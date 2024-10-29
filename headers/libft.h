@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/29 16:44:34 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/10/29 19:57:05 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,7 +186,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 // MATH functions
 int		ft_min(int a, int b);
-int		ft_min(int a, int b);
+int		ft_max(int a, int b);
 int		ft_absolute(int nb);
 
 // PUT/PRINT functions
