@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/05 17:52:11 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:45:10 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@
 
 /**
  * List structure for linked list implementation
- * 
+ *
 */
 typedef struct s_list
 {
@@ -56,8 +56,8 @@ typedef enum e_base
 }	t_base;
 
 /**
- * Enum structure to hold possible errors that can be thrown at
- * different level of the ft_printf function
+ * Enum structure to hold possible errors that can be thrown
+ * in libft library
  *
 */
 typedef enum e_libft_error

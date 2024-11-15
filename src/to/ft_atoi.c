@@ -6,18 +6,25 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 18:12:08 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/07 13:12:55 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:43:32 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	ft_isspace(int c);
+static int	ft_return_overflow(int is_negative);
 
-/*
-	Converts the initial portion of the string to int representation
+/**
+ * Converts the initial portion of the string to int representation.
+ *
+ * If char other than digit encountered, the function stops reading and
+ * returns what has been transformed so far.
+ *
+ * If the result is bigger than 2147483647 it returns 2147483647, if
+ * the result is smaller than -2147483648 it returns -2147483648.
+ *
 */
-
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -25,7 +32,7 @@ int	ft_atoi(const char *str)
 	int	result;
 
 	i = 0;
-	is_negative = 0;
+	is_negative = 1;
 	result = 0;
 	while (ft_isspace(str[i]))
 		i++;
@@ -38,12 +45,13 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 	{
+		if (result > 2147483647/10 || (result == 2147483647/10 &&
+			str[i] - 48 > 7))
+				return (ft_return_overflow(is_negative));
 		result = (result * 10) + (str[i] - 48);
 		i++;
 	}
-	if (is_negative)
-		result = result * (-1);
-	return (result);
+	return (result * is_negative);
 }
 
 static int	ft_isspace(int c)
@@ -52,4 +60,12 @@ static int	ft_isspace(int c)
 		return (1);
 	else
 		return (0);
+}
+
+static int	ft_return_overflow(int is_negative)
+{
+	if (is_negative == 1)
+		return 2147483647;
+	else
+		return -2147483648;
 }
