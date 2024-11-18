@@ -1,3 +1,8 @@
+# TODOs
+- [ ] debug ft_atoi for handling int overflow for push_swap
+- [ ] move ft_isspace(c) to is funcitons and make non static
+- [ ] test ft_atodbl() for fract-ol
+
 # 42 Core Project 00 - libft
 
 Libft is a library project with many small usefull common functions to be used along a way when working on more advanced projects in 42 Cirriculum.

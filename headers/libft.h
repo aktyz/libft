@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/15 18:45:10 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/11/18 23:37:15 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,6 +200,7 @@ char	*ft_itoa(int n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
+double	ft_atodbl(char *s);
 
 // STRING functions
 char	*ft_strdup(char *src);
