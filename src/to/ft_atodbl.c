@@ -13,6 +13,9 @@
 #include "libft.h"
 
 static int	ft_isspace(int c);
+static void	ft_collect_integer(long *integer, char **c, int *err);
+static void	ft_collect_fraction(double *fraction, double *pow, char **c,
+				int *err);
 
 double	ft_atodbl(char *s)
 {
@@ -20,25 +23,26 @@ double	ft_atodbl(char *s)
 	double	fraction;
 	double	pow;
 	int		sign;
+	int		err;
 
 	integer = 0;
 	fraction = 0.0;
 	pow = 1;
 	sign = 1;
+	err = 0;
 	while (ft_isspace(*s))
 		s++;
 	while (*s == '+' || *s == '-')
 		if (*s++ == '-')
 			sign = -sign;
-	while (*s != '.' && *s)
-		integer = (integer * 10) + (*s++ - 48);
+	while (*s != '.' && *s && !err)
+		ft_collect_integer(&integer, &s, &err);
+	if (err)
+		return (integer * sign);
 	if (*s == '.')
 		s++;
-	while (*s)
-	{
-		pow /= 10;
-		fraction = fraction + (*s++ - 48) * pow;
-	}
+	while (*s & !err)
+		ft_collect_fraction(&fraction, &pow, &s, &err);
 	return ((integer + fraction) * sign);
 }
 
@@ -48,4 +52,28 @@ static int	ft_isspace(int c)
 		return (1);
 	else
 		return (0);
+}
+
+static void	ft_collect_integer(long *integer, char **c, int *err)
+{
+	if (ft_isdigit(**c))
+	{
+		*integer = (*integer * 10) + (**c - 48);
+		(*c)++;
+	}
+	else
+		*err = 1;
+}
+
+static void	ft_collect_fraction(double *fraction, double *pow, char **c,
+		int *err)
+{
+	if (ft_isdigit(**c))
+	{
+		*pow /= 10;
+		*fraction = *fraction + (**c - 48) * (*pow);
+		(*c)++;
+	}
+	else
+		*err = 1;
 }
