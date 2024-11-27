@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   test_ft_clear_char_array.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/27 09:10:44 by zslowian         ###   ########.fr       */
+/*   Created: 2024/11/27 08:50:33 by zslowian          #+#    #+#             */
+/*   Updated: 2024/11/27 09:10:28 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_memset();
-	*/
-
-int	main(void)
+void	test_ft_clear_char_array(void)
 {
-	ft_printf("\n*** STARTING TESTS ***\n\n");
-	test_ft_atoi();
-	test_ft_clear_char_array();
-	ft_printf("\nAll tests completed!\n\n");
-	return (0);
+	char	**array;
+	char	**ptr;
+
+	array = ft_split("3 6 22", ' ');
+	if (!array)
+		return ;
+	ft_printf("Before clearing:\n");
+	ptr = array;
+	while (*ptr)
+	{
+		ft_printf("%s\n", *ptr);
+		ptr++;
+	}
+	ft_clear_char_array(&array);
+	printf("After clearing:\n");
+	if (array == NULL)
+		printf("Array is NULL\n");
+	else
+		printf("Array is not NULL\n");
 }

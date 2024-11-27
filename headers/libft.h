@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/18 23:37:15 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/11/27 09:11:44 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -217,6 +217,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+void	ft_clear_char_array(char ***array);
 
 // FT_PRINTF functions
 bool	ft_in(const char *str, char c);

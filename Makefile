@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/24 16:24:47 by zslowian          #+#    #+#              #
-#    Updated: 2024/10/14 21:56:04 by zslowian         ###   ########.fr        #
+#    Updated: 2024/11/27 09:07:37 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ INCLUDES = -I headers
 
 $(DIR_OBJ)/%.o: $(DIR_SRC)/%.c
 	@mkdir -p $(DIR_OBJ) $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@ -g
 
 $(NAME): $(OBJ)
 	@ar cr $(NAME) $(OBJ)
@@ -54,9 +54,9 @@ clean:
 re: fclean all
 
 test: $(NAME)
-	cc -Wall -Werror -Wextra $(TEST_SRC) -L. -lft -I ./headers -o test.out
+	$(CC) $(CFLAGS) $(TEST_SRC) -L. -lft -I ./headers -o test.out
 
 debug: $(NAME)
-	cc -Wall -Werror -Wextra $(TEST_SRC) -g -L. -lft -I ./headers -o test.out
+	$(CC) $(CFLAGS) $(TEST_SRC) -g -L. -lft -I ./headers -o test.out
 
 .PHONY: all clean fclean re test
