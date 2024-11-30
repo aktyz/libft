@@ -29,7 +29,10 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	ptr = ft_allocate_words(s, c, ptr);
 	if (!ptr)
+	{
+		ft_clear_char_array(&ptr);
 		return (0);
+	}
 	return (ptr);
 }
 
