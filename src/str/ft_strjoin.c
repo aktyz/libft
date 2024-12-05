@@ -38,5 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	ft_strlcpy(ptr, s1, len_s1);
 	ft_strlcpy(ptr + len_s1, s2, len_s2);
-	return (free((void *) s1), ptr);
+	if (s1)
+		free((void *) s1);
+	return (ptr);
 }
