@@ -13,7 +13,6 @@
 #include "libft.h"
 
 char		*get_next_line(int fd);
-static char	*read_to_buffer(char *buffer, int fd);
 static char	*get_line_from_buffer(char *buffer);
 static char	*update_buffer(char *buffer);
 
@@ -24,38 +23,12 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (0);
-	buffer[fd] = read_to_buffer(buffer[fd], fd);
+	buffer[fd] = ft_read_to_buffer(buffer[fd], fd, '\n');
 	if (!buffer[fd])
 		return (0);
 	line = get_line_from_buffer(buffer[fd]);
 	buffer[fd] = update_buffer(buffer[fd]);
 	return (line);
-}
-
-static char	*read_to_buffer(char *buffer, int fd)
-{
-	char	*tmp;
-	int		bytes;
-
-	tmp = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
-	bytes = 1;
-	if (!tmp)
-		return (0);
-	while (bytes > 0 && !ft_strchr(buffer, '\n'))
-	{
-		bytes = read(fd, tmp, BUFFER_SIZE);
-		if (bytes == -1)
-		{
-			if (buffer)
-				free(buffer);
-			free(tmp);
-			return (0);
-		}
-		if (bytes)
-			buffer = ft_strjoin(buffer, tmp);
-	}
-	free(tmp);
-	return (buffer);
 }
 
 static char	*get_line_from_buffer(char *buffer)

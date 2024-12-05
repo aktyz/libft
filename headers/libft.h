@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/27 09:11:44 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:04:02 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -240,5 +240,6 @@ void	print_width_precision(char *ft_name, t_data *data);
 
 // GNL functions
 char	*get_next_line(int fd);
+char	*ft_read_to_buffer(char *buffer, int fd, char end);
 
 #endif
