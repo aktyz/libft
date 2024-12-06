@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/30 17:24:49 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/06 17:26:40 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	main(void)
 	ft_printf("\n*** STARTING TESTS ***\n\n");
 	//test_ft_atoi();
 	//test_ft_clear_char_array();
-	test_ft_split();
+	//test_ft_split();
+	test_ft_strjoin();
 	ft_printf("\nAll tests completed!\n\n");
 	return (0);
 }

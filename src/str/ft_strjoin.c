@@ -32,13 +32,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len_s2 = ft_strlen(s2);
 	ptr = ft_calloc(len_s1 + len_s2 + 1, sizeof(char));
 	if (!ptr)
-	{
-		free((void *) s1);
 		return (0);
-	}
 	ft_strlcpy(ptr, s1, len_s1);
 	ft_strlcpy(ptr + len_s1, s2, len_s2);
-	if (s1)
-		free((void *) s1);
 	return (ptr);
 }
