@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 17:21:38 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/07 23:12:44 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/08 00:09:12 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ void	test_ft_read_to_buffer(void)
 		{
 			ft_printf("Test 1 - Error with the function\n");
 		}
+	free(buffer);
 	close(fd);
 }

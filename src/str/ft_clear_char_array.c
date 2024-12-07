@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 08:50:46 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/27 09:11:14 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/08 00:10:55 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_clear_char_array(char ***array)
 {
-	char **ptr;
+	char	**ptr;
 
 	if (array == NULL || *array == NULL)
-		return;
+		return ;
 	ptr = *array;
 	while (*ptr)
 	{

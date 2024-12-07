@@ -6,13 +6,14 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 16:02:27 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/07 22:55:44 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/08 00:15:17 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_read_to_buffer(char *buffer, int fd, char end);
+static void	ft_error_exit(char **buffer, char **tmp);
 
 char	*ft_read_to_buffer(char *buffer, int fd, char end)
 {
@@ -28,17 +29,24 @@ char	*ft_read_to_buffer(char *buffer, int fd, char end)
 		bytes = read(fd, tmp, BUFFER_SIZE);
 		if (bytes == -1)
 		{
-			if (buffer)
-				free(buffer);
-			free(tmp);
+			ft_error_exit(&buffer, &tmp);
 			return (0);
 		}
 		if (bytes)
 		{
-			buffer = ft_strjoin(buffer, tmp);
-			ft_bzero(tmp, BUFFER_SIZE);
+			buffer = ft_strreplace(buffer, tmp);
+			ft_bzero(tmp, BUFFER_SIZE + 1);
 		}
 	}
-	free(tmp);
+	if (tmp)
+		free(tmp);
 	return (buffer);
+}
+
+static void	ft_error_exit(char **buffer, char **tmp)
+{
+	if (*buffer)
+		free(*buffer);
+	if (*tmp)
+		free(*tmp);
 }

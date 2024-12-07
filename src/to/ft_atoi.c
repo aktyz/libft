@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 18:12:08 by zslowian          #+#    #+#             */
-/*   Updated: 2024/11/15 18:43:32 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/08 00:14:53 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 	{
-		if (result > 2147483647/10 || (result == 2147483647/10 &&
-			str[i] - 48 > 7))
-				return (ft_return_overflow(is_negative));
+		if (result > 2147483647 / 10 || (result == 2147483647 / 10
+				&& str[i] - 48 > 7))
+			return (ft_return_overflow(is_negative));
 		result = (result * 10) + (str[i] - 48);
 		i++;
 	}
@@ -65,7 +65,7 @@ static int	ft_isspace(int c)
 static int	ft_return_overflow(int is_negative)
 {
 	if (is_negative == 1)
-		return 2147483647;
+		return (2147483647);
 	else
-		return -2147483648;
+		return (-2147483648);
 }
