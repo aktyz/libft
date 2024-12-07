@@ -6,12 +6,14 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 17:21:38 by zslowian          #+#    #+#             */
-/*   Updated: 2024/10/03 19:26:52 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/07 23:12:44 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <fcntl.h> // open
+
+void	test_ft_read_to_buffer(void);
 
 void	test_gnl(void)
 {
@@ -20,6 +22,7 @@ void	test_gnl(void)
 	int	count;
 
 	count = 1;
+	printf("\nTesting get_next_line\n");
 	fd = open("./test/examples/short2.txt", O_RDONLY);
 	if (fd == -1)
 			ft_printf("Error opening file!");
@@ -34,4 +37,25 @@ void	test_gnl(void)
 		free(next_line);
 	}
 	close(fd);	
+}
+
+void	test_ft_read_to_buffer(void)
+{
+	char	*buffer;
+	int		fd;
+
+	printf("\nTesting ft_read_to_buffer\n");
+	buffer = NULL;
+	fd = open("./test/examples/do_not_modify.txt", O_RDONLY);
+	if (fd == -1)
+	{
+		ft_printf("Error opening file!");
+		return ;
+	}
+	buffer = ft_read_to_buffer(buffer, fd, '\n');
+	if (ft_strncmp((const char *) buffer, "My short example\n\nso", 21))
+		{
+			ft_printf("Test 1 - Error with the function\n");
+		}
+	close(fd);
 }

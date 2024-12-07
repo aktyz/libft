@@ -66,5 +66,6 @@ void	test_plus_category(void);
 
 // FT_GNL functions
 void	test_gnl(void);
+void	test_ft_read_to_buffer(void);
 
 #endif

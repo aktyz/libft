@@ -21,15 +21,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*ptr;
 
 	if (!s2)
-		return (0);
+		len_s2 = 0;
+	else
+		len_s2 = ft_strlen(s2);
 	if (!s1)
-	{
-		s1 = ft_calloc(1, sizeof(char));
-		len_s1 = 1;
-	}
+		len_s1 = 0;
 	else
 		len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
 	ptr = ft_calloc(len_s1 + len_s2 + 1, sizeof(char));
 	if (!ptr)
 		return (0);
