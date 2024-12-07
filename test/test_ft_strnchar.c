@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   test_ft_strnchar.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/08 00:48:26 by zslowian         ###   ########.fr       */
+/*   Created: 2024/12/08 00:42:55 by zslowian          #+#    #+#             */
+/*   Updated: 2024/12/08 00:52:33 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_memset();
-	*/
-
-int	main(void)
+void	test_ft_strnchar(void)
 {
-	ft_printf("\n*** STARTING TESTS ***\n\n");
-	//test_ft_atoi();
-	//test_ft_clear_char_array();
-	//test_ft_split();
-	//test_ft_strjoin();
-	test_ft_strnchar();
-	ft_printf("\nAll tests completed!\n\n");
-	return (0);
+	char	my_string[20];
+	int		result;
+
+	ft_strlcpy(my_string, "", 0);
+	result = ft_strnchar(my_string, ' ');
+	if (result != 0)
+		ft_printf("Test 1 on empty string failed\n");
+	ft_strlcpy(my_string, "abc yz zyta blah", ' ');
+	result = ft_strnchar(my_string, ' ');
+	if (result != 3)
+		ft_printf("Test 2 failed\n");
 }

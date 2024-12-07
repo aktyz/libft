@@ -35,6 +35,7 @@ void	test_ft_strtrim(void);
 void	test_ft_substr(void);
 void	test_ft_clear_char_array(void);
 void	test_ft_split(void);
+void	test_ft_strnchar(void);
 
 void	test_ft_bzero(void);
 void	test_ft_memset(void);
