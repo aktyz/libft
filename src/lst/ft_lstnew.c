@@ -18,6 +18,7 @@ t_list	*ft_lstnew(void *content)
 
 	list_node = malloc(sizeof(t_list));
 	list_node->content = content;
+	list_node->lst_size = 1;
 	list_node->next = 0;
 	return (list_node);
 }

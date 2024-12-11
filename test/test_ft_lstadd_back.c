@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   test_ft_lstadd_back.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 17:43:11 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/11 14:29:32 by zslowian         ###   ########.fr       */
+/*   Created: 2024/12/11 14:26:16 by zslowian          #+#    #+#             */
+/*   Updated: 2024/12/11 15:33:32 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_libft.h"
 
-/* TODO enrich test cases and correct with a fresh head on Sunday
-	// test_ft_memset();
-	*/
-
-int	main(void)
+void	test_ft_lstadd_back(void)
 {
-	ft_printf("\n*** STARTING TESTS ***\n\n");
-	//test_ft_atoi();
-	//test_ft_clear_char_array();
-	//test_ft_split();
-	//test_ft_strjoin();
-	//test_ft_strnchar();
-	test_ft_lstadd_back();
-	ft_printf("\nAll tests completed!\n\n");
-	return (0);
+	t_list	*list;
+	t_list	*new;
+	
+	list = NULL;
+	new = malloc(sizeof(t_list));
+	new->content = "ABC";
+	new->lst_size = 1;
+	ft_lstadd_back(&list, new);
+	new = malloc(sizeof(t_list));
+	new->content = "YXA";
+	new->lst_size = 1;
+	ft_lstadd_back(&list, new);
+	new = malloc(sizeof(t_list));
+	new->content = "Blah";
+	new->lst_size = 1;
+	ft_lstadd_back(&list, new);
+	ft_lstclear(&list, free);
 }

@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/08 00:50:24 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:48:35 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@
 typedef struct s_list
 {
 	void			*content;
+	int				lst_size;
 	struct s_list	*next;
 }	t_list;
 
