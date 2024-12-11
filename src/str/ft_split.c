@@ -23,14 +23,16 @@ static size_t	ft_word_length(char const *s, char c);
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
+	int		nb_words;
 
-	ptr = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	nb_words = (ft_count_words(s, c) + 1);
+	ptr = malloc(nb_words * sizeof(char *));
 	if (!ptr)
 		return (0);
 	ptr = ft_allocate_words(s, c, ptr);
 	if (!ptr)
 	{
-		ft_clear_char_array(&ptr);
+		ft_clear_char_array(&ptr, nb_words);
 		return (0);
 	}
 	return (ptr);
@@ -85,23 +87,23 @@ static char	**ft_allocate_words(char const *s, char c, char **ptr)
 
 static size_t	ft_count_words(char const *s, char c)
 {
-	size_t	count;
+	size_t	nb_words;
 	size_t	i;
 
-	count = 0;
+	nb_words = 0;
 	i = 0;
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
-			count++;
+			nb_words++;
 			while (s[i] && s[i] != c)
 				i++;
 		}
 		else
 			i++;
 	}
-	return (count);
+	return (nb_words);
 }
 
 static size_t	ft_word_length(char const *s, char c)

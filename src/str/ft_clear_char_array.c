@@ -6,24 +6,24 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 08:50:46 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/08 00:10:55 by zslowian         ###   ########.fr       */
+/*   Updated: 2024/12/11 17:56:27 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_clear_char_array(char ***array)
+void	ft_clear_char_array(char ***arr, int arr_size)
 {
 	char	**ptr;
 
-	if (array == NULL || *array == NULL)
+	if (arr == NULL || *arr == NULL)
 		return ;
-	ptr = *array;
-	while (*ptr)
+	ptr = *arr;
+	while (arr_size--)
 	{
 		free(*ptr);
 		ptr++;
 	}
-	free(*array);
-	*array = NULL;
+	free(*arr);
+	*arr = NULL;
 }
