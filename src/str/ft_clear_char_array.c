@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 08:50:46 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/11 18:27:06 by zslowian         ###   ########.fr       */
+/*   Updated: 2025/01/06 18:54:17 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ft_clear_char_array(char ***arr, int arr_size)
 			free(*ptr);
 		ptr++;
 	}
-	free(*arr);
+	if (*arr)
+		free(*arr);
 	*arr = NULL;
 }
