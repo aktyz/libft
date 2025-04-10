@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/24 16:24:47 by zslowian          #+#    #+#              #
-#    Updated: 2024/11/27 09:07:37 by zslowian         ###   ########.fr        #
+#    Updated: 2025/04/10 21:35:23 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ DIR_SRC = src
 DIR_OBJ = obj
 DIR_TEST = test
 
-SUBDIR = ft_printf gnl is lst main math mem put str to
+SUBDIR = ft_printf gnl is lst main math mem put str str_arr to
 
 SRC_DIR = $(foreach dir, $(SUBDIR), $(addprefix $(DIR_SRC)/, $(dir)))
 #SRC_DIR = ./src/is ./src/lst ./src/mem ./src/put ./src/str ./src/to
