@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:05:45 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/11 17:46:52 by zslowian         ###   ########.fr       */
+/*   Updated: 2025/04/10 21:21:41 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,6 +164,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 
 // LIST functions
 int		ft_lstsize(t_list *lst);
@@ -220,6 +221,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 void	ft_clear_char_array(char ***arr, int arr_size);
+void	ft_print_char_array(char **arr, int arr_size);
 int		ft_strnchar(char *str, char c);
 
 // FT_PRINTF functions

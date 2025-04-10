@@ -1,6 +1,6 @@
 # TODOs
 - [ ] debug ft_atoi for handling int overflow for push_swap
-- [ ] move ft_isspace(c) to is funcitons and make non static
+- [x] move ft_isspace(c) to is funcitons and make non static
 - [ ] test ft_atodbl() for fract-ol
 
 # 42 Core Project 00 - libft

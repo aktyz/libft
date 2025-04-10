@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-static int	ft_isspace(int c);
 static void	ft_collect_integer(long *integer, char **c, int *err);
 static void	ft_collect_fraction(double *fraction, double *pow, char **c,
 				int *err);
@@ -44,14 +43,6 @@ double	ft_atodbl(char *s)
 	while (*s & !err)
 		ft_collect_fraction(&fraction, &pow, &s, &err);
 	return ((integer + fraction) * sign);
-}
-
-static int	ft_isspace(int c)
-{
-	if (c == 32 || (c > 8 && c < 14))
-		return (1);
-	else
-		return (0);
 }
 
 static void	ft_collect_integer(long *integer, char **c, int *err)

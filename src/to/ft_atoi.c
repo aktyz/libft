@@ -6,13 +6,12 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 18:12:08 by zslowian          #+#    #+#             */
-/*   Updated: 2024/12/08 00:14:53 by zslowian         ###   ########.fr       */
+/*   Updated: 2025/04/10 21:22:44 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c);
 static int	ft_return_overflow(int is_negative);
 
 /**
@@ -52,14 +51,6 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * is_negative);
-}
-
-static int	ft_isspace(int c)
-{
-	if (c == 32 || (c > 8 && c < 14))
-		return (1);
-	else
-		return (0);
 }
 
 static int	ft_return_overflow(int is_negative)
