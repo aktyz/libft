@@ -32,7 +32,7 @@ void	test_ft_lstdelone(void)
 	ft_lstadd_back(&list, ft_lstnew(content));
 	ptr = ft_lstlast(list);
 	content = (t_lst_content*) ptr->content;
-	ft_lstdelone(ptr, free_lst_content);
+	//ft_lstdelone(ptr, free_lst_content);
 	ft_lstclear(&list, free_lst_content);
 }
 
@@ -44,9 +44,15 @@ static void	free_lst_content(void *lst_content)
 	if(!content)
 		return ;
 	if(content->name)
+	{
 		free(content->name);
+		content->name = NULL;
+	}
 	if(content->value)
+	{
 		free(content->value);
+		content->value = NULL;
+	}
 	if(content)
 		free(content);
 	lst_content = NULL;

@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/**
+ * Function free the whole lst using del function to free the content of each
+ * of it's nodes.
+ *
+ */
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*head;
@@ -20,7 +25,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst)
 	{
-		head = (*lst)->next;
+		if((*lst)->next)
+			head = (*lst)->next;
+		else
+			head = NULL;
 		ft_lstdelone(*lst, del);
 		*lst = head;
 	}
