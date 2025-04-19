@@ -19,14 +19,7 @@
 int	main(void)
 {
 	ft_printf("\n*** STARTING TESTS ***\n\n");
-	//test_ft_atoi();
-	//test_ft_clear_char_array();
-	//test_ft_split();
-	//test_ft_strjoin();
-	//test_ft_strnchar();
-	//test_ft_lstadd_back();
-	test_ft_clear_char_array();
-	//test_ft_split();
+	test_ft_lstdelone();
 	ft_printf("\nAll tests completed!\n\n");
 	return (0);
 }

@@ -49,8 +49,9 @@ void	test_ft_itoa(void);
 void	test_ft_atoi(void);
 
 void	test_ft_lstlast(void);
-void    test_ft_lstnew(void);
+void	test_ft_lstnew(void);
 void	test_ft_lstadd_back(void);
+void	test_ft_lstdelone(void);
 
 void	test_ft_min(void);
 
@@ -69,5 +70,12 @@ void	test_plus_category(void);
 // FT_GNL functions
 void	test_gnl(void);
 void	test_ft_read_to_buffer(void);
+
+typedef struct s_lst_content
+{
+	char	*name;
+	char	*value;
+	bool	export;
+}	t_lst_content;
 
 #endif
