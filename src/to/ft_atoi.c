@@ -6,7 +6,7 @@
 /*   By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 18:12:08 by zslowian          #+#    #+#             */
-/*   Updated: 2025/04/10 21:22:44 by zslowian         ###   ########.fr       */
+/*   Updated: 2025/04/27 16:11:23 by zslowian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 		i++;
 	if (str[i] == 45)
 	{
-		is_negative = 1;
+		is_negative = -1;
 		i++;
 	}
 	while (ft_isdigit(str[i]))
