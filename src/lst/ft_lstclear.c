@@ -25,7 +25,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst)
 	{
-		if((*lst)->next)
+		if ((*lst)->next)
 			head = (*lst)->next;
 		else
 			head = NULL;

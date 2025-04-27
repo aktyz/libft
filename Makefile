@@ -6,7 +6,7 @@
 #    By: zslowian <zslowian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/24 16:24:47 by zslowian          #+#    #+#              #
-#    Updated: 2025/04/10 21:35:23 by zslowian         ###   ########.fr        #
+#    Updated: 2025/04/27 16:16:15 by zslowian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ CFLAGS = -Wall -Wextra -Werror
 
 DIR_SRC = src
 DIR_OBJ = obj
-DIR_TEST = test
 
 SUBDIR = ft_printf gnl is lst main math mem put str str_arr to
 
@@ -28,8 +27,6 @@ OBJ_DIR = $(foreach dir, $(SUBDIR), $(addprefix $(DIR_OBJ)/, $(dir)))
 SRC = $(foreach dir, $(SRC_DIR), $(wildcard $(dir)/*.c))
 #SRC = ./src/is/ft_isalnum.c ... ./src/to/ft_toupper.c
 OBJ = $(subst $(DIR_SRC), $(DIR_OBJ), $(SRC:.c=.o))
-#TEST_DIR = ./test/*.c
-TEST_SRC = $(wildcard $(DIR_TEST)/*.c)
 
 INCLUDES = -I headers
 
@@ -46,17 +43,10 @@ all: $(NAME)
 fclean: clean
 	@rm -f $(NAME)
 	@rm -fr $(DIR_OBJ)
-	@rm -f test.out
 
 clean:
-	@rm -f $(OBJ)
+	@rm -fr $(DIR_OBJ)
 
 re: fclean all
 
-test: $(NAME)
-	$(CC) $(CFLAGS) $(TEST_SRC) -L. -lft -I ./headers -o test.out
-
-debug: $(NAME)
-	$(CC) $(CFLAGS) $(TEST_SRC) -g -L. -lft -I ./headers -o test.out
-
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re

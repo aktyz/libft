@@ -1,6 +1,0 @@
-My short example
-
-something else with END
-
-I don't know what other text to put here
-
